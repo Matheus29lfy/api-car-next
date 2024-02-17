@@ -1,3 +1,60 @@
+# Sobre os pacotes de instalação
+npm, pnpm e  yarn são pacotes de instalação para libs que serão usadas no projeto bem como para ser "startado" depois que instalar, use o pacote de usa preferência
+
+# Para Rodar o projeto
+npm install 
+yarn add
+pnpm install
+
+para rodar projeto depois de instalado vai estar no package.json scripts
+npm run dev
+pnpm run dev
+yarn run dev
+
+
+# DOCKER
+docker-compose up
+Já tem um arquivo docker com as config é só fazer o start do docker
+
+Só ajustar .env.example para .env e alterar para o db que está rodando
+
+
+# Prisma
+Vai instalar as principais dependências e uma delas é o prisma que é um ORM para fazer interações com o banco de dados
+
+Dentro da pasta prisma vai ter um chamado schema.prisma que são as classes
+para fazer o schema do banco
+
+No final tem um método chamado @@map("table_name") que é um alias para a tabela
+Para cada migração deve-se rodar o comando
+
+# Comando para migration 
+npx prisma migrate dev [Nome da migation]
+
+# Sobre o projeto
+
+É uma api simples só para ter uma noção, está baseado em classe achei mais fácil de leitura, nessa meu irmão me ajudou, pelo que entendi tudo o que estiver dentro da pasta "/page" é caminho para api
+
+então no meu exemplo é 
+GET
+/api/cars- Traz todos os carros
+
+POST
+/api/cars- Cria um carro novo
+
+PUT
+/api/cars?[id]- Atualiza um carro existente
+
+DELETE
+/api/cars?[id]- Delete um carro existente
+
+
+a index.ts  /api/car onde tem a função handler é como se fosse a route 
+Essa api é bem simples, só para ter uma base mesmo
+
+
+A rota user é o padrão do projeto quando inicializa do zero, e todos os arquivos relacionados a user, arquivos .tsx são frontend
+
 # TypeScript Next.js example
 
 This is a really simple project that shows the usage of Next.js with TypeScript.
